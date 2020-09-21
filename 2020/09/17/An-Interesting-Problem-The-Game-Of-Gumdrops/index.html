@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>An Interesting Problem - The Game Of Gumdrops | Jason&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="DescriptionThis problem is from my Discrete Mathematics Course. In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An Interesting Problem - The Game Of Gumdrops">
+<meta property="og:url" content="http://example.com/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/index.html">
+<meta property="og:site_name" content="Jason&#39;s Blog">
+<meta property="og:description" content="DescriptionThis problem is from my Discrete Mathematics Course. In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.linkpicture.com/q/File_001.png">
+<meta property="article:published_time" content="2020-09-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-09-21T10:05:10.763Z">
+<meta property="article:author" content="Jason Feng">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.linkpicture.com/q/File_001.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Jason&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://github.com/JasonFengGit">Github</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-An-Interesting-Problem-The-Game-Of-Gumdrops" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/" class="article-date">
+  <time datetime="2020-09-16T16:00:00.000Z" itemprop="datePublished">2020-09-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      An Interesting Problem - The Game Of Gumdrops
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p><em>This problem is from my Discrete Mathematics Course.</em></p>
+<p>In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid with arbitrary width and length on each turn. The player then eats the gumdrop as well as all gumdrops above and to the right of it. The player who is forced to eat the poisoned lower-left corner one loses.</p>
+<p><img src="https://www.linkpicture.com/q/File_001.png"><img/></p>
+<h3 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h3><p>Player 1 has a winning strategy.</p>
+<h3 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h3><p>Let’s say this is a M x N grid, and each player chooses a gumdrop with a position (i, j). Also, we suppose the two players are extremely smart, and they know exactly if they can win in a particular scenario(any state of the game board). Since there is no tie, then either player one or player two has a winning strategy.</p>
+<h5 id="Prove-it-by-Contradiction"><a href="#Prove-it-by-Contradiction" class="headerlink" title="Prove it by Contradiction:"></a>Prove it by Contradiction:</h5><p>Assume player two has the winning strategy, then whatever player one moves, player two can perform an action that leads him/her to win. That is if player one picks the top right corner, player two has a winning strategy by selecting another gumdrop positioned at (i, j) to win the game. However, if picking (i, j) can lead player two to win, player one would have known it and can pick (i, j) in the first place instead of choosing the upper right corner to win the game. As a result, there is a contradiction, and player one is the one who has a winning strategy.<br>As a result, there is a contradiction and player one is the one who has a winning strategy.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This is called a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Strategy-stealing_argument">Strategy-stealing Argument</a> where in some games, Player 1 can steal the strategy which Player 2 may do to win. (since they are all “genius”)</p>
+<p>What do you think of this problem or the proof? Do you accept it, or do you have other proofs? Leave in the comments below!<br><br/><br>What do you think of this problem or the proof? Do you accept it or do you have other proofs? Leave in the comments below!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/" data-id="ckfcczoi40002x0v40pix0a6u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/15/Shooting-Stars/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Shooting Stars</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/">An Interesting Problem - The Game Of Gumdrops</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/15/Shooting-Stars/">Shooting Stars</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/13/Ball-Battle/">Ball Battle</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Jason Feng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/JasonFengGit" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
