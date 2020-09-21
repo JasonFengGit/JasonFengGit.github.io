@@ -7,12 +7,15 @@
   
   <title>Jason&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Be an engineer, not coder.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Jason&#39;s Blog">
 <meta property="og:url" content="https://jasonfenggit.github.io/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
+<meta property="og:description" content="Be an engineer, not coder.">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Jason Feng">
+<meta property="article:tag" content="computer science, technology, coding">
 <meta name="twitter:card" content="summary">
   
   
@@ -88,19 +91,19 @@
       
         <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p><em>This problem is from my Discrete Mathematics Course.</em></p>
 <p>In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid with arbitrary width and length on each turn. The player then eats the gumdrop as well as all gumdrops above and to the right of it. The player who is forced to eat the poisoned lower-left corner one loses.</p>
-<p><img src="https://www.linkpicture.com/q/File_001.png"><img/></p>
-<h3 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h3><p>Player 1 has a winning strategy.</p>
-<h3 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h3><p>Let’s say this is a M x N grid, and each player chooses a gumdrop with a position (i, j). Also, we suppose the two players are extremely smart, and they know exactly if they can win in a particular scenario(any state of the game board). Since there is no tie, then either player one or player two has a winning strategy.</p>
-<h5 id="Prove-it-by-Contradiction"><a href="#Prove-it-by-Contradiction" class="headerlink" title="Prove it by Contradiction:"></a>Prove it by Contradiction:</h5><p>Assume player two has the winning strategy, then whatever player one moves, player two can perform an action that leads him/her to win. That is if player one picks the top right corner, player two has a winning strategy by selecting another gumdrop positioned at (i, j) to win the game. However, if picking (i, j) can lead player two to win, player one would have known it and can pick (i, j) in the first place instead of choosing the upper right corner to win the game. As a result, there is a contradiction, and player one is the one who has a winning strategy.<br>As a result, there is a contradiction and player one is the one who has a winning strategy.</p>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This is called a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Strategy-stealing_argument">Strategy-stealing Argument</a> where in some games, Player 1 can steal the strategy which Player 2 may do to win. (since they are all “genius”)</p>
-<p>What do you think of this problem or the proof? Do you accept it, or do you have other proofs? Leave in the comments below!<br><br/><br>What do you think of this problem or the proof? Do you accept it or do you have other proofs? Leave in the comments below!</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       <a data-url="https://jasonfenggit.github.io/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/" data-id="ckfcczoi40002x0v40pix0a6u" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proof/" rel="tag">proof</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/puzzle/" rel="tag">puzzle</a></li></ul>
+
     </footer>
   </div>
   
@@ -131,58 +134,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Have you ever imagine being in a spaceship looking at the stars flying through you? This project might make the scene alive on your computer!</p>
-<h3 id="GIFs"><a href="#GIFs" class="headerlink" title="GIFs"></a>GIFs</h3><p><img src="https://www.linkpicture.com/q/no_trail_less.gif" alt="stars with no trails"><br><img src="https://www.linkpicture.com/q/no_trail_more.gif" alt="more stars"><br><img src="https://pic3.zhimg.com/v2-056e2956cd5b25dc85bf82a319010daa_b.gif" alt="stars with trails"></p>
-<h3 id="Github-Repo-amp-Links"><a href="#Github-Repo-amp-Links" class="headerlink" title="Github Repo &amp; Links"></a>Github Repo &amp; Links</h3><p>Visit the <a target="_blank" rel="noopener" href="https://github.com/JasonFengGit/ShootingStars">Github Repo</a> for this project</p>
-<p>Project inspired by:<br>-Processing Examples At cs.brynmawr.edu<br>-The Coding Train</p>
-<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul>
-<li>Stars flying from far gets larger when closer</li>
-<li>Be a time controller! Move the mouse to control the speed</li>
-<li>You may select whether seeing the trails</li>
-</ul>
-<h3 id="Controls"><a href="#Controls" class="headerlink" title="Controls"></a>Controls</h3><table>
-<thead>
-<tr>
-<th>action</th>
-<th>control</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Speed Up</td>
-<td><kbd>Move The Mouse To Right</kbd></td>
-</tr>
-<tr>
-<td>Slow Down</td>
-<td><kbd>Move The Mouse To Right</kbd></td>
-</tr>
-</tbody></table>
-<h3 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h3><p>You will need the <code>pygame</code> package for this game.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pygame</span><br></pre></td></tr></table></figure>
-
-<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><p>Download the <code>shooting_stars.py</code> file or clone this repo and run it in the terminal.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python shooting_stars.py</span><br></pre></td></tr></table></figure>
-
-<h2 id="HOW-To-Create-Your-Version"><a href="#HOW-To-Create-Your-Version" class="headerlink" title="HOW To Create Your Version"></a>HOW To Create Your Version</h2><h5 id="init-the-frame"><a href="#init-the-frame" class="headerlink" title="init the frame"></a>init the frame</h5><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">width = <span class="number">500</span></span><br><span class="line">height = <span class="number">500</span></span><br><span class="line">pg.init()</span><br><span class="line">scr = pg.display.set_mode((width, height))</span><br><span class="line">pg.display.set_caption(<span class="string">&quot;Shooting Stars&quot;</span>)</span><br><span class="line">pg.display.set_icon(scr)</span><br></pre></td></tr></table></figure>
-
-<h5 id="class-definition-of-Star"><a href="#class-definition-of-Star" class="headerlink" title="class definition of Star"></a>class definition of Star</h5><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Star class</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Star</span>:</span></span><br><span class="line">    <span class="comment"># constructor</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">       self.x = random.randint(-width//<span class="number">2</span>, width//<span class="number">2</span>)</span><br><span class="line">       self.y = random.randint(-height//<span class="number">2</span>, height//<span class="number">2</span>)</span><br><span class="line">       self.z = random.randint(<span class="number">1</span>, width)</span><br><span class="line">       self.oz = self.z</span><br><span class="line"></span><br><span class="line">    <span class="comment">## update function</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span>(<span class="params">self, speed</span>):</span></span><br><span class="line">        self.z -= speed</span><br><span class="line">        </span><br><span class="line">        <span class="comment">## if the star vanished, initialize it again</span></span><br><span class="line">        <span class="keyword">if</span> self.z &lt; <span class="number">1</span> <span class="keyword">or</span> self.z == <span class="number">0</span>:</span><br><span class="line">            self.__init__()</span><br><span class="line"></span><br><span class="line">    <span class="comment">## show function</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">show</span>(<span class="params">self</span>):</span></span><br><span class="line">        sx = int(self.x/self.z * width)</span><br><span class="line">        sy = int(self.y/self.z * height)</span><br><span class="line"></span><br><span class="line">        r = int((<span class="number">1</span> - self.z/width) * <span class="number">4</span>)</span><br><span class="line">        pg.draw.circle(scr, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), (sx + width//<span class="number">2</span> + r//<span class="number">2</span>, sy + height//<span class="number">2</span> + r//<span class="number">2</span>), r)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(showingMeteors):</span><br><span class="line">            px = int(self.x/self.oz * width)</span><br><span class="line">            py = int(self.y/self.oz * height)</span><br><span class="line">            pg.draw.line(scr, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>), (sx + width//<span class="number">2</span>, sy + height//<span class="number">2</span>), (px + width//<span class="number">2</span>, py + height//<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">            <span class="comment">## uncomment this line if you want the trail from some distance away</span></span><br><span class="line">            <span class="comment">## instead of the star&#x27;s origin position</span></span><br><span class="line">            <span class="comment">#self.oz = self.z + 50</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="show-and-update-function-for-a-list-of-Stars"><a href="#show-and-update-function-for-a-list-of-Stars" class="headerlink" title="show and update function for a list of Stars"></a>show and update function for a list of Stars</h5><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## show stars and update the speeds </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw</span>():</span></span><br><span class="line">    speed = (pg.mouse.get_pos()[<span class="number">0</span>] / width) * <span class="number">10</span></span><br><span class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> stars:</span><br><span class="line">        each.update(speed)</span><br><span class="line">        each.show()</span><br></pre></td></tr></table></figure>
-
-<h5 id="initialize-a-list-of-Stars-with-a-given-number-and-run-the-main-loop"><a href="#initialize-a-list-of-Stars-with-a-given-number-and-run-the-main-loop" class="headerlink" title="initialize a list of Stars with a given number and run the main loop"></a>initialize a list of Stars with a given number and run the main loop</h5><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## initialize the stars, you may change the number of stars </span></span><br><span class="line">num_of_stars = <span class="number">800</span></span><br><span class="line">stars = [Star() <span class="keyword">for</span> i <span class="keyword">in</span> range(num_of_stars)]</span><br><span class="line"></span><br><span class="line"><span class="comment">## main loop</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    scr.fill((<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">    <span class="keyword">for</span> eve <span class="keyword">in</span> pg.event.get():</span><br><span class="line">        <span class="keyword">if</span> eve.type == QUIT:</span><br><span class="line">            sys.exit()</span><br><span class="line">    draw()</span><br><span class="line">    pg.display.update()</span><br><span class="line">    sleep(<span class="number">0.005</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Enjoy your journey in the universe! Make sure to create a version yourself!</p>
-<h3 id="Improvements-you-can-make"><a href="#Improvements-you-can-make" class="headerlink" title="Improvements you can make"></a>Improvements you can make</h3><ul>
-<li>add different colors or shapes to the stars</li>
-<li>make the scene three-dimensional</li>
-<li>add a spaceship model</li>
-<li>…</li>
-</ul>
-
+<h3 id="GIFs"><a href="#GIFs" class="headerlink" title="GIFs"></a>GIFs</h3><p><img src="https://www.linkpicture.com/q/no_trail_less.gif" alt="stars with no trails"></p>
+        
+          <p class="article-more-link">
+            <a href="/2020/09/15/Shooting-Stars/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       <a data-url="https://jasonfenggit.github.io/2020/09/15/Shooting-Stars/" data-id="ckfcckf9g0001x0v42u82hjoq" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pygame/" rel="tag">pygame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
     </footer>
   </div>
   
@@ -225,64 +190,19 @@
 <td><img src="https://www.linkpicture.com/q/getting_point.png"></td>
 </tr>
 </tbody></table>
-<h3 id="Controls"><a href="#Controls" class="headerlink" title="Controls"></a>Controls</h3><table>
-<thead>
-<tr>
-<th></th>
-<th>Button</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Move Up(P1)</td>
-<td><kbd>W</kbd></td>
-</tr>
-<tr>
-<td>Move Down(P1)</td>
-<td><kbd>S</kbd></td>
-</tr>
-<tr>
-<td>Move Up(P2)</td>
-<td><kbd>Up</kbd></td>
-</tr>
-<tr>
-<td>Move Down(P2)</td>
-<td><kbd>Down</kbd></td>
-</tr>
-</tbody></table>
-<h3 id="Github-Repo"><a href="#Github-Repo" class="headerlink" title="Github Repo"></a>Github Repo</h3><p>Please leave a star if you like it!<br><a target="_blank" rel="noopener" href="https://github.com/JasonFengGit/BallBattle">https://github.com/JasonFengGit/BallBattle</a></p>
-<h3 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h3><p>You will need the <code>pygame</code> package for this project.<br><br> </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pygame</span><br></pre></td></tr></table></figure>
-
-<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><p>Download the <code>ball_battle.py</code> file in the <code>Github Repo</code> and run it in the terminal.<br><br></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python ball_battle.py</span><br></pre></td></tr></table></figure>
-
-<h2 id="Create-Your-Own-Version"><a href="#Create-Your-Own-Version" class="headerlink" title="Create Your Own Version!"></a>Create Your Own Version!</h2><h3 id="Main-Components"><a href="#Main-Components" class="headerlink" title="Main Components"></a>Main Components</h3><ul>
-<li>game frame</li>
-<li>ball</li>
-<li>panels</li>
-</ul>
-<h3 id="Main-Functions"><a href="#Main-Functions" class="headerlink" title="Main Functions"></a>Main Functions</h3><h5 id="initialize-the-frame"><a href="#initialize-the-frame" class="headerlink" title="initialize the frame"></a>initialize the frame</h5><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pg.init()</span><br><span class="line">scr=pg.display.set_mode((<span class="number">600</span>,<span class="number">400</span>))</span><br><span class="line">pg.display.set_caption(<span class="string">&quot;ball battle&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h5 id="initialize-function-and-update-function-of-the-ball"><a href="#initialize-function-and-update-function-of-the-ball" class="headerlink" title="initialize function and update function of the ball"></a>initialize function and update function of the ball</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># initialize the ball</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_ball</span>(<span class="params">ball_speed</span>):</span></span><br><span class="line">    pg.draw.circle(scr,(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),(<span class="number">300</span>,<span class="number">200</span>), <span class="number">7</span>)</span><br><span class="line"></span><br><span class="line">    vx = random.randint(-ball_speed, ball_speed)</span><br><span class="line">    vy = random.randint(-ball_speed, ball_speed)</span><br><span class="line">    <span class="keyword">while</span> vx == <span class="number">0</span>:</span><br><span class="line">        vx = random.randint(-ball_speed, ball_speed)</span><br><span class="line">    <span class="keyword">while</span> vy == <span class="number">0</span>:</span><br><span class="line">        vy = random.randint(-ball_speed, ball_speed)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">300</span>, <span class="number">200</span>, vx, vy</span><br><span class="line"></span><br><span class="line"><span class="comment"># update and display the ball</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_ball</span>(<span class="params">x, y, vx, vy, p1_y, p2_y</span>):</span></span><br><span class="line">    <span class="comment"># update the x, y positions based on velocities</span></span><br><span class="line">    x += vx</span><br><span class="line">    y += vy</span><br><span class="line"></span><br><span class="line">    <span class="comment"># the ball bounces if it hits something</span></span><br><span class="line">    <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">or</span> x &gt; (<span class="number">600</span> - <span class="number">7</span>) <span class="keyword">or</span> in_wall(x, y) <span class="keyword">or</span> in_p(x, y, p1_y, p2_y):</span><br><span class="line">        vx = -vx</span><br><span class="line">    <span class="keyword">if</span> y &lt; <span class="number">0</span> <span class="keyword">or</span> y &gt; (<span class="number">400</span> - <span class="number">7</span>):</span><br><span class="line">        vy = -vy</span><br><span class="line">    pg.draw.circle(scr,(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),(x, y), <span class="number">7</span>)</span><br><span class="line">    <span class="keyword">return</span> x, y, vx, vy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="update-and-display-functions-of-panels"><a href="#update-and-display-functions-of-panels" class="headerlink" title="update and display functions of panels"></a>update and display functions of panels</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># update and draw the panels</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_panel</span>(<span class="params">p1_y, p2_y</span>):</span></span><br><span class="line">    speed = <span class="number">2</span></span><br><span class="line">    keys = pg.key.get_pressed()</span><br><span class="line">    <span class="keyword">if</span> keys[K_w]:</span><br><span class="line">        p1_y -= speed</span><br><span class="line">        p1_y = max(<span class="number">0</span>, p1_y)</span><br><span class="line">    <span class="keyword">elif</span> keys[K_s]:</span><br><span class="line">        p1_y += speed</span><br><span class="line">        p1_y = min(<span class="number">350</span>, p1_y)</span><br><span class="line">    <span class="keyword">if</span> keys[K_UP]:</span><br><span class="line">        p2_y -= speed</span><br><span class="line">        p2_y = max(<span class="number">0</span>, p2_y)</span><br><span class="line">    <span class="keyword">elif</span> keys[K_DOWN]:</span><br><span class="line">        p2_y += speed</span><br><span class="line">        p2_y = min(<span class="number">350</span>, p2_y)</span><br><span class="line">    pg.draw.rect(scr,(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),(<span class="number">100</span>,p1_y,<span class="number">10</span>,<span class="number">50</span>),<span class="number">0</span>)</span><br><span class="line">    pg.draw.rect(scr,(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>),(<span class="number">490</span>,p2_y,<span class="number">10</span>,<span class="number">50</span>),<span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> (p1_y, p2_y)</span><br></pre></td></tr></table></figure>
-<h5 id="collisions-detection"><a href="#collisions-detection" class="headerlink" title="collisions detection"></a>collisions detection</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wall detection</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">in_wall</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> (y <span class="keyword">in</span> range(<span class="number">75</span>) <span class="keyword">and</span> x <span class="keyword">in</span> range(<span class="number">80</span>)) <span class="keyword">or</span> (y <span class="keyword">in</span> range(<span class="number">325</span>,<span class="number">400</span>) <span class="keyword">and</span> x <span class="keyword">in</span> range(<span class="number">80</span>)) <span class="keyword">or</span> (y <span class="keyword">in</span> range(<span class="number">325</span>,<span class="number">400</span>) <span class="keyword">and</span> x <span class="keyword">in</span> range(<span class="number">520</span>, <span class="number">600</span>)) <span class="keyword">or</span> (y <span class="keyword">in</span> range(<span class="number">75</span>) <span class="keyword">and</span> x <span class="keyword">in</span> range(<span class="number">520</span>, <span class="number">600</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># panel detection</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">in_panel</span>(<span class="params">x, y, p1_y, p2_y</span>):</span></span><br><span class="line">    <span class="keyword">if</span> x <span class="keyword">in</span> range(<span class="number">100</span>, <span class="number">110</span>):</span><br><span class="line">        <span class="keyword">return</span> y <span class="keyword">in</span> range(p1_y, p1_y + <span class="number">50</span>)</span><br><span class="line">    <span class="keyword">elif</span> x <span class="keyword">in</span> range(<span class="number">490</span>, <span class="number">500</span>):</span><br><span class="line">        <span class="keyword">return</span> y <span class="keyword">in</span> range(p2_y, p2_y + <span class="number">50</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h5 id="compose-the-functions-above-to-form-the-mainloop"><a href="#compose-the-functions-above-to-form-the-mainloop" class="headerlink" title="compose the functions above to form the mainloop"></a>compose the functions above to form the mainloop</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># main game loop</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main_loop</span>():</span></span><br><span class="line">    c_x, c_y = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    p1_y, p2_y = <span class="number">200</span>, <span class="number">200</span></span><br><span class="line">    p1 = <span class="number">0</span></span><br><span class="line">    p2 = <span class="number">0</span></span><br><span class="line">    b_x, b_y = <span class="number">-1</span>, <span class="number">-1</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">if</span> p1 &gt;= <span class="number">6</span> <span class="keyword">or</span> p2 &gt;= <span class="number">6</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        scr.fill((<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># IMPORTANT!!! without this, the program would crash</span></span><br><span class="line">        <span class="keyword">for</span> eve <span class="keyword">in</span> pg.event.get():</span><br><span class="line">            <span class="keyword">if</span> eve.type == QUIT:</span><br><span class="line">                sys.exit()</span><br><span class="line">        keys = pg.key.get_pressed()</span><br><span class="line">        </span><br><span class="line">        p1_y, p2_y = draw_p(p1_y, p2_y)</span><br><span class="line">        draw_socre_zone()</span><br><span class="line"></span><br><span class="line">        printtext(zt30, <span class="string">&quot;Player 1: &quot;</span> + str(p1), <span class="number">100</span>, <span class="number">10</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">        printtext(zt30, <span class="string">&quot;Player 2: &quot;</span> + str(p2), <span class="number">370</span>, <span class="number">10</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">        printtext(zt24, <span class="string">&quot;press R to serve again&quot;</span>, <span class="number">200</span>, <span class="number">30</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (b_x == <span class="number">-1</span> <span class="keyword">and</span> b_y) == <span class="number">-1</span> <span class="keyword">or</span> keys[K_r]:</span><br><span class="line">            b_x, b_y, vx, vy = init_ball(<span class="number">2</span>)</span><br><span class="line">            <span class="comment">#print(b_x, b_y)</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            b_x, b_y, vx, vy = update_ball(b_x, b_y, vx, vy, p1_y, p2_y)</span><br><span class="line">        <span class="keyword">if</span> b_x <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">80</span>) <span class="keyword">and</span> b_y <span class="keyword">in</span> range(<span class="number">75</span>, <span class="number">325</span>):</span><br><span class="line">            p2 += <span class="number">1</span></span><br><span class="line">            <span class="comment">#sleep(1)</span></span><br><span class="line">            printtext(zt30, <span class="string">&quot;Player 2 got 1 point!&quot;</span>, <span class="number">220</span>, <span class="number">200</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">            pg.display.update()</span><br><span class="line">            sleep(<span class="number">1.5</span>)</span><br><span class="line">            b_x, b_y, vx, vy = init_ball(<span class="number">2</span>)</span><br><span class="line">        <span class="keyword">elif</span> b_x <span class="keyword">in</span> range(<span class="number">520</span>,<span class="number">600</span>) <span class="keyword">and</span> b_y <span class="keyword">in</span> range(<span class="number">75</span>, <span class="number">325</span>):</span><br><span class="line">            p1 += <span class="number">1</span></span><br><span class="line">            <span class="comment">#sleep(1)</span></span><br><span class="line">            printtext(zt30, <span class="string">&quot;Player 1 got 1 point!&quot;</span>, <span class="number">220</span>, <span class="number">200</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">            pg.display.update()</span><br><span class="line">            sleep(<span class="number">1.5</span>)</span><br><span class="line">            b_x, b_y, vx, vy = init_ball(<span class="number">2</span>)</span><br><span class="line">        pg.display.update()</span><br><span class="line">        </span><br><span class="line">        sleep(<span class="number">0.005</span>)</span><br><span class="line">    scr.fill((<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line">    </span><br><span class="line">    printtext(zt40, <span class="string">&quot;Player %d got 1 point!&quot;</span>%(<span class="number">1</span> <span class="keyword">if</span> p1 &gt; p2 <span class="keyword">else</span> <span class="number">2</span>), <span class="number">220</span>, <span class="number">200</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">    printtext(zt30, <span class="string">&quot;press R to restart&quot;</span>, <span class="number">200</span>, <span class="number">30</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">    pg.display.update()</span><br><span class="line"></span><br><span class="line">    keys = pg.key.get_pressed()</span><br><span class="line">    scr.fill((<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> keys[K_r]:</span><br><span class="line">        <span class="keyword">for</span> eve <span class="keyword">in</span> pg.event.get():</span><br><span class="line">            <span class="keyword">if</span> eve.type == QUIT:</span><br><span class="line">                sys.exit()</span><br><span class="line">        keys = pg.key.get_pressed()</span><br><span class="line"></span><br><span class="line">        printtext(zt40, <span class="string">&quot;Player %d WIN!!! Woooo Lololo&quot;</span>%(<span class="number">1</span> <span class="keyword">if</span> p1 &gt; p2 <span class="keyword">else</span> <span class="number">2</span>), <span class="number">130</span>, <span class="number">200</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">        printtext(zt30, <span class="string">&quot;press R to restart&quot;</span>, <span class="number">200</span>, <span class="number">30</span>, (<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">        pg.display.update()</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Now please enjoy the game and create your own version of it!  Try adding some new features to the game!</p>
-<h3 id="improvements-you-can-make"><a href="#improvements-you-can-make" class="headerlink" title="improvements you can make"></a>improvements you can make</h3><ul>
-<li>add a pause function to pause the game.</li>
-<li>add a AI to play against human players.</li>
-<li>make different maps to make it more interesting.</li>
-<li>…</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/09/13/Ball-Battle/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       <a data-url="https://jasonfenggit.github.io/2020/09/13/Ball-Battle/" data-id="ckfccbm6d0000x0v4390tdlli" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pygame/" rel="tag">pygame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
     </footer>
   </div>
   
@@ -296,19 +216,63 @@
         
           <aside id="sidebar">
   
-    
+    <div class="widget-wrap">
+    <h3 class="widget-title">about</h3>
+    <div class="widget">
+        
+        <h5 style="color:black;">A student at Uniersity of Southern California.</h5><br/>
+        <h4 >Bio: Be an engineer, not a coder.</h4><br/>
+        <a style="margin-left: 0px;" target="_blank" rel="noopener" href="https://github.com/JasonFengGit">
+            <img src="https://www.linkpicture.com/q/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b4ec817.2080142615351082033227.png" height="45px" width="45px">
+            
+            </img>
+                                   
+        </a>
+        <a style="margin-left: 17px;" href="https://jasonfenggit.github.io/Visualizer">
+            <img src="https://www.linkpicture.com/q/favicon_16.ico" height="40px" width="40px">
+            </img>
+        </a>
 
+        <a style="margin-left: 20px;" target="_blank" rel="noopener" href="https://www.zhihu.com/people/Jason_Feng_">
+            <img src="https://www.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Zhihu-512.png" height="40px" width="40px">
+            </img>
+        </a>
+
+        <a style="margin-left: 20px;" target="_blank" rel="noopener" href="https://www.linkedin.com/in/zhenbang-feng-86ab281b7/">
+            <img src="https://www.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_LinkedIn-512.png" height="40px" width="40px">
+            </img>
+        </a>
+        
+    </div>
+  </div>
   
     
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/math/" rel="tag">math</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proof/" rel="tag">proof</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/puzzle/" rel="tag">puzzle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pygame/" rel="tag">pygame</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/math/" style="font-size: 10px;">math</a> <a href="/tags/proof/" style="font-size: 10px;">proof</a> <a href="/tags/puzzle/" style="font-size: 10px;">puzzle</a> <a href="/tags/pygame/" style="font-size: 20px;">pygame</a> <a href="/tags/python/" style="font-size: 20px;">python</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -341,6 +305,7 @@
         
       </div>
       <footer id="footer">
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
   
   <div class="outer">
     <div id="footer-info" class="inner">
