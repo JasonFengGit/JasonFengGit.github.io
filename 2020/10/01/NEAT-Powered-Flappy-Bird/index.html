@@ -5,24 +5,27 @@
   
 
   
-  <title>An Interesting Problem - The Game Of Gumdrops | Jason&#39;s Blog</title>
+  <title>NEAT Powered Flappy Bird | Jason&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="DescriptionThis problem is from my Discrete Mathematics Course. In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid">
+  <meta name="description" content="A Pygame implementation of classic Flappy-Bird game controlled by Neuroevolutional AI.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="An Interesting Problem - The Game Of Gumdrops">
-<meta property="og:url" content="https://jasonfenggit.github.io/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/index.html">
+<meta property="og:title" content="NEAT Powered Flappy Bird">
+<meta property="og:url" content="https://jasonfenggit.github.io/2020/10/01/NEAT-Powered-Flappy-Bird/index.html">
 <meta property="og:site_name" content="Jason&#39;s Blog">
-<meta property="og:description" content="DescriptionThis problem is from my Discrete Mathematics Course. In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid">
+<meta property="og:description" content="A Pygame implementation of classic Flappy-Bird game controlled by Neuroevolutional AI.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://www.linkpicture.com/q/File_001.png">
-<meta property="article:published_time" content="2020-09-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-10-01T14:46:58.118Z">
+<meta property="og:image" content="https://linkpicture.com/q/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200924201028.png">
+<meta property="og:image" content="https://www.linkpicture.com/q/1_34.gif">
+<meta property="og:image" content="https://www.linkpicture.com/q/2_5.gif">
+<meta property="og:image" content="https://www.linkpicture.com/q/3_4.gif">
+<meta property="og:image" content="https://www.linkpicture.com/q/4_5.gif">
+<meta property="article:published_time" content="2020-10-01T15:38:44.000Z">
+<meta property="article:modified_time" content="2020-10-01T15:51:37.206Z">
 <meta property="article:author" content="Jason Feng">
-<meta property="article:tag" content="math">
-<meta property="article:tag" content="proof">
-<meta property="article:tag" content="puzzle">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="pygame">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.linkpicture.com/q/File_001.png">
+<meta name="twitter:image" content="https://linkpicture.com/q/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200924201028.png">
   
   
     <link rel="icon" href="images/favicon.ico">
@@ -73,14 +76,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-An-Interesting-Problem-The-Game-Of-Gumdrops" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-NEAT-Powered-Flappy-Bird" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/" class="article-date">
-  <time datetime="2020-09-16T16:00:00.000Z" itemprop="datePublished">2020-09-17</time>
+    <a href="/2020/10/01/NEAT-Powered-Flappy-Bird/" class="article-date">
+  <time datetime="2020-10-01T15:38:44.000Z" itemprop="datePublished">2020-10-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/blogs/">blogs</a>
+    <a class="article-category-link" href="/categories/projects/">projects</a>
   </div>
 
   </div>
@@ -91,7 +94,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      An Interesting Problem - The Game Of Gumdrops
+      NEAT Powered Flappy Bird
     </h1>
   
 
@@ -99,23 +102,48 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p><em>This problem is from my Discrete Mathematics Course.</em></p>
-<p>In the game of gumdrops, two players are on alternative turns with Player 1 going first. The player has to choose any gumdrop on a grid with arbitrary width and length on each turn. The player then eats the gumdrop as well as all gumdrops above and to the right of it. The player who is forced to eat the poisoned lower-left corner one loses.</p>
+        <p>A Pygame implementation of classic Flappy-Bird game controlled by Neuroevolutional AI.<br/></p>
 <a id="more"></a>
-<p><img src="https://www.linkpicture.com/q/File_001.png"><img/></p>
-<h3 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h3><p>Player 1 has a winning strategy.</p>
-<h3 id="Proof"><a href="#Proof" class="headerlink" title="Proof"></a>Proof</h3><p>Let’s say this is a M x N grid, and each player chooses a gumdrop with a position (i, j). Also, we suppose the two players are extremely smart, and they know exactly if they can win in a particular scenario(any state of the game board). Since there is no tie, then either player one or player two has a winning strategy.</p>
-<h5 id="Prove-it-by-Contradiction"><a href="#Prove-it-by-Contradiction" class="headerlink" title="Prove it by Contradiction:"></a>Prove it by Contradiction:</h5><p>Assume player two has the winning strategy, then whatever player one moves, player two can perform an action that leads him/her to win. That is if player one picks the top right corner, player two has a winning strategy by selecting another gumdrop positioned at (i, j) to win the game. However, if picking (i, j) can lead player two to win, player one would have known it and can pick (i, j) in the first place instead of choosing the upper right corner to win the game. As a result, there is a contradiction, and player one is the one who has a winning strategy.<br>As a result, there is a contradiction and player one is the one who has a winning strategy.</p>
-<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This is called a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Strategy-stealing_argument">Strategy-stealing Argument</a> where in some games, Player 1 can steal the strategy which Player 2 may do to win. (since they are all “genius”)</p>
-<p>What do you think of this problem or the proof? Do you accept it, or do you have other proofs? Leave in the comments below!<br><br/><br>What do you think of this problem or the proof? Do you accept it or do you have other proofs? Leave in the comments below!</p>
+<h2 id="Screenshots-amp-Gifs"><a href="#Screenshots-amp-Gifs" class="headerlink" title="Screenshots &amp; Gifs"></a>Screenshots &amp; Gifs</h2><img src="https://linkpicture.com/q/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200924201028.png" width=200 height=300>
+
+
+<table>
+<thead>
+<tr>
+<th><img src="https://www.linkpicture.com/q/1_34.gif" alt="Screen 1"></th>
+<th><img src="https://www.linkpicture.com/q/2_5.gif" alt="Screen 2"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="https://www.linkpicture.com/q/3_4.gif" alt="Screen 3"></td>
+<td><img src="https://www.linkpicture.com/q/4_5.gif" alt="Screen 4"></td>
+</tr>
+</tbody></table>
+<h2 id="Logistic"><a href="#Logistic" class="headerlink" title="Logistic"></a>Logistic</h2><p><strong>This project uses the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Neuroevolution">NEAT(NeuroEvolution of Augmenting Topologies)</a> algorithm with <a target="_blank" rel="noopener" href="https://neat-python.readthedocs.io/en/latest/neat_overview.html">neat-python</a>.<br/><br>Check out the initial NEAT Paper <a target="_blank" rel="noopener" href="http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf">here</a>.</strong></p>
+<p>In our NEAT algorithm, each bird has its own genomes(weights of its neural network), and birds that performs well get to pass their genomes to the next generation. Our idea is to evolve the “best” set of genome through generations to make the birds master the game.</p>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><p><code>neat-python</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install neat-python</span><br></pre></td></tr></table></figure>
+
+<p><code>pygame</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pygame</span><br></pre></td></tr></table></figure>
+
+<h2 id="How-To-Run"><a href="#How-To-Run" class="headerlink" title="How To Run"></a>How To Run</h2><p>Clone this project and run <code>flappy-bird.py</code>.</p>
+<h2 id="Sample-Stats-of-A-Generation"><a href="#Sample-Stats-of-A-Generation" class="headerlink" title="Sample Stats of A Generation"></a>Sample Stats of A Generation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"> ****** Running generation 1 ****** </span><br><span class="line"></span><br><span class="line">Population&#39;s average fitness: 192.69333 stdev: 98.08002</span><br><span class="line">Best fitness: 812.60000 - size: (3, 7) - species 2 - id 35</span><br><span class="line">Average adjusted fitness: 0.010</span><br><span class="line">Mean genetic distance 3.222, standard deviation 0.580</span><br><span class="line">Population of 75 members in 31 species:</span><br><span class="line">   ID   age  size  fitness  adj fit  stag</span><br><span class="line">  &#x3D;&#x3D;&#x3D;&#x3D;  &#x3D;&#x3D;&#x3D;  &#x3D;&#x3D;&#x3D;&#x3D;  &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;  &#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">     1    1     8    751.6    0.181     0</span><br><span class="line">     2    1     9    812.6    0.073     0</span><br><span class="line">     3    1     2    175.4    0.000     0</span><br><span class="line">     4    1     2    175.6    0.000     0</span><br><span class="line">     5    1     2    175.6    0.000     0</span><br><span class="line">     6    1     2    175.2    0.000     1</span><br><span class="line">     7    1     2    175.2    0.000     1</span><br><span class="line">     8    1     2    175.4    0.000     1</span><br><span class="line">     9    1     2    175.8    0.000     0</span><br><span class="line">    10    1     2    251.4    0.040     1</span><br><span class="line">    11    1     2    175.4    0.000     0</span><br><span class="line">    12    1     2    175.6    0.001     1</span><br><span class="line">    13    1     2    175.6    0.000     0</span><br><span class="line">    14    1     2    175.8    0.000     0</span><br><span class="line">    15    1     2    175.4    0.000     0</span><br><span class="line">    16    1     2    175.6    0.000     1</span><br><span class="line">    17    1     2    176.0    0.001     0</span><br><span class="line">    18    1     2    175.4    0.000     1</span><br><span class="line">    19    1     2    175.4    0.000     0</span><br><span class="line">    20    1     2    175.4    0.000     1</span><br><span class="line">    21    1     2    175.6    0.000     0</span><br><span class="line">    22    1     2    175.4    0.000     0</span><br><span class="line">    23    1     2    175.8    0.000     0</span><br><span class="line">    24    1     2    175.6    0.000     0</span><br><span class="line">    25    1     2    175.4    0.000     0</span><br><span class="line">    26    1     2    175.6    0.000     0</span><br><span class="line">    27    1     2    175.4    0.000     1</span><br><span class="line">    28    1     2    175.4    0.000     0</span><br><span class="line">    29    1     2    176.0    0.001     0</span><br><span class="line">    30    1     2    176.2    0.001     0</span><br><span class="line">    31    1     2    175.4    0.000     0</span><br><span class="line">Total extinctions: 0</span><br><span class="line">Generation time: 6.907 sec (6.901 average)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Potential-Improvements"><a href="#Potential-Improvements" class="headerlink" title="Potential Improvements"></a>Potential Improvements</h2><ul>
+<li>increase the difficulty along with game progress</li>
+<li>try different model architectures</li>
+<li>add random rewards and punishments(such as fruits and bombs) in the game</li>
+<li>…</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jasonfenggit.github.io/2020/09/17/An-Interesting-Problem-The-Game-Of-Gumdrops/" data-id="ckfcczoi40002x0v40pix0a6u" class="article-share-link">Share</a>
+      <a data-url="https://jasonfenggit.github.io/2020/10/01/NEAT-Powered-Flappy-Bird/" data-id="ckfqzz66r0001dkv47w9cbaw0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/" rel="tag">math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/proof/" rel="tag">proof</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/puzzle/" rel="tag">puzzle</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pygame/" rel="tag">pygame</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
     </footer>
   </div>
@@ -123,19 +151,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/09/22/Leetcode-743-Network-Delay-Time/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Leetcode 743. Network Delay Time
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/15/Shooting-Stars/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/10/01/Chiness-Chess/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Shooting Stars</div>
+      <div class="article-nav-title">Chiness Chess</div>
     </a>
   
 </nav>
