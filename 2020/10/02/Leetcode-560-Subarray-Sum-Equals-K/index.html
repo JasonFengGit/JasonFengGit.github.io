@@ -15,7 +15,7 @@
 <meta property="og:description" content="DescriptionOrigin Problem Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals k.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-02T13:06:37.000Z">
-<meta property="article:modified_time" content="2020-10-04T16:11:54.880Z">
+<meta property="article:modified_time" content="2020-10-05T11:17:20.590Z">
 <meta property="article:author" content="Jason Feng">
 <meta property="article:tag" content="Leetcode&#x2F;Lintcode">
 <meta property="article:tag" content="Prefix Sum">
@@ -104,6 +104,7 @@
 <p>Example 1:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums &#x3D; [1,1,1], k &#x3D; 2</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
 
+
 <h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>We can use the <a href="../../../10/02/Prefix-Sum/">prefix sum</a> technique to solve the problem. Instead of calculating the sum of all possible subarrays(<code>O(n) each</code>), we can use the prefix sums to get the sum of subarray <code>(i, j)</code> in <code>O(n)</code>. Now we just have to iterate through all <code>(i, j)</code> pairs and count how many sums are equal to <code>k</code>. The total time complexity is <code>O(n^2)</code>.</p>
 <h3 id="Optimization"><a href="#Optimization" class="headerlink" title="Optimization"></a>Optimization</h3><p>We can do better. Iterating through all <code>(i, j)</code> pairs is expensive. We can instead use a <code>dict</code> to store the number of each specific prefix sum. Since we want <code>prefix[i]-prefix[j] = k</code>, we can easily know how many <code>j</code>s are valid, by finding the numbers of prefix sums that are <code>k-prefix[j]</code> in <code>dict</code>. To avoid counting duplicates, we calculate the prefix sums along with the counting process. The time complexity is now <code>O(n)</code>.</p>
 <p>Here is my code:</p>
@@ -154,11 +155,11 @@
             <img src="https://www.linkpicture.com/q/circle-cropped_11.png" style="padding-left: 30%;" height="80px" width="80px"></img>
         </a>
         <br/><br/>
-        <h5 style="color:black;">A student at Uniersity of Southern California.</h5>
+        <h5 style="color:black;">@Uniersity of Southern California.</h5>
+        <h5 style="color:black;">Computer Science | Algorithms | Artificial Intelligence</h5>
         <h4 style="margin-left: -2px;">Bio: Be an engineer, not a coder.</h4><br/>
         <a target="_blank" rel="noopener" href="https://github.com/JasonFengGit">
             <img src="https://www.linkpicture.com/q/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b4ec817.2080142615351082033227.png" height="45px" width="45px">
-            
             </img>
                                    
         </a>
